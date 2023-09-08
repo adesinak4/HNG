@@ -4,7 +4,7 @@ const getData = (req, res) => {
   const slack_name = req.query.slack_name;
   const track = req.query.track;
   const currentDay = moment().format('dddd');
-  const currentUTCTime = moment().utcOffset('+01:00').format();
+  const currentUTCTime = moment().utc().format('YYYY-MM-DDTHH:mm:ss[Z]');
 
   const jsonResponse = {
     slack_name: slack_name,
