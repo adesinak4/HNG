@@ -12,7 +12,7 @@ const getData = (req, res) => {
     utc_time: currentUTCTime,
     track: track,
     github_file_url: 'https://github.com/adesinak4/HNG/blob/main/Backend%20Stage%20One/app.js',
-    github_repo_url: 'https://github.com/adesinak4/HNG',
+    github_repo_url: 'https://github.com/adesinak4/HNG/tree/main/Backend%20Stage%20One',
     status_code: 200,
   };
 
