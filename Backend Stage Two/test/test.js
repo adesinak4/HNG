@@ -98,13 +98,14 @@ describe('User API Endpoints', () => {
     });
 
     describe('DELETE /api/users/:user_id', () => {
-        it('should delete a user by user_id', (done) => {
+        it('should delete a user by user_id and return user_id and name', (done) => {
             chai
                 .request(server)
                 .delete(`/api/${createdUserId}`)
                 .end((err, res) => {
                     expect(res).to.have.status(200);
-                    expect(res.body.message).to.equal('User deleted successfully');
+                    expect(res.body.user_id).to.exist;
+                    expect(res.body.name).to.exist;
                     done();
                 });
         });
@@ -119,4 +120,5 @@ describe('User API Endpoints', () => {
                 });
         });
     });
+
 });
